@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartParkingApp">
-        <activity android:name=".ReserFindActivity"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".ReserFindActivity" />
         <activity android:name=".ParkInfoActivity" />
         <activity android:name=".SuccessActivity2" />
         <activity android:name=".ReserveActivity" />

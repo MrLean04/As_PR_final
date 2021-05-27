@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchSignUp() {
-        Intent intent = new Intent(this, SignInActivity.class);
+        Intent intent = new Intent(this, SignupActivity.class);
         startActivity(intent);
     }
 }
