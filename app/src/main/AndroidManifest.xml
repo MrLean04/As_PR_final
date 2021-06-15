@@ -10,12 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartParkingApp">
         <activity
+            android:name=".SucesspayActivity"
+            android:label="@string/title_activity_sucesspay"
+            android:theme="@style/Theme.SmartParkingApp.NoActionBar"></activity>
+        <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".ReserFindActivity" />
         <activity android:name=".ParkInfoActivity" />
-        <activity android:name=".SuccessActivity2" />
         <activity android:name=".ReserveActivity" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".FavActivity" />

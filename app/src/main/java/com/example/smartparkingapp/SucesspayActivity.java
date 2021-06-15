@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-public class SuccessActivity2 extends AppCompatActivity {
+public class SucesspayActivity extends AppCompatActivity {
+
 
     private Button buttonSucConf;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,12 +19,15 @@ public class SuccessActivity2 extends AppCompatActivity {
 
         buttonSucConf = findViewById(R.id.button_succonf);
         buttonSucConf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchSucConf();
-            }
+        @Override
+        public void onClick(View v) {
+            launchSucConf();
+        }
         });
+
+
     }
+
 
     public void launchSucConf() {
         Intent intent = new Intent(this, HomeActivity.class);

@@ -26,7 +26,7 @@ public class CheckpayActivity extends AppCompatActivity {
     }
 
     public void launchFiniPay() {
-        Intent intent = new Intent(this, SuccessActivity2.class);
+        Intent intent = new Intent(this, SucesspayActivity.class);
         startActivity(intent);
     }
 }
