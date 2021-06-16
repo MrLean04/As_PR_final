@@ -26,7 +26,7 @@ public class InfoActivity extends AppCompatActivity {
     }
 
     public void launchSearchInfo() {
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, ReserveActivity.class);
         startActivity(intent);
     }
 }

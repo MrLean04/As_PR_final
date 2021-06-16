@@ -16,7 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartParkingApp"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".Search2Activity" />
+        <activity android:name=".statLisboaActivity"></activity>
+        <activity android:name=".statAveiroActivity" />
+        <activity android:name=".StatisticsActivity" />
+        <activity android:name=".myReservesActivity" />
+        <activity android:name=".Rserve3Activity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -32,10 +36,10 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".ReserFindActivity" />
         <activity android:name=".ParkInfoActivity" />
-        <activity android:name=".ReserveActivity" />
+        <activity android:name=".Reserve2Activity" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".FavActivity" />
-        <activity android:name=".SearchActivity" />
+        <activity android:name=".ReserveActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".ConfParkActivity" />
         <activity android:name=".CheckpayActivity" />

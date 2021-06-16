@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Search2Activity extends AppCompatActivity {
+public class Rserve3Activity extends AppCompatActivity {
 
     private Button buttonAddFav, buttonFind;
 
@@ -22,7 +22,7 @@ public class Search2Activity extends AppCompatActivity {
         buttonAddFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Search2Activity.this, "Success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Rserve3Activity.this, "Success", Toast.LENGTH_SHORT).show();
             }
         });
 

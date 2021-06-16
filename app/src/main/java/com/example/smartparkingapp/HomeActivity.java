@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -58,12 +57,12 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void launchMyReserves() {
-        Intent intent = new Intent(this, ReserveActivity.class);
+        Intent intent = new Intent(this, myReservesActivity.class);
         startActivity(intent);
     }
 
     public void launchStatistics() {
-        Intent intent = new Intent(this, InfoActivity.class);
+        Intent intent = new Intent(this, StatisticsActivity.class);
         startActivity(intent);
     }
 

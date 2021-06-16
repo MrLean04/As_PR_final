@@ -4,42 +4,53 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-public class ReserveActivity extends AppCompatActivity {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-    private Button buttonConfereser, buttonMyReser;
+public class ReserveActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.reserve);
+        setContentView(R.layout.search);
 
-        buttonConfereser = findViewById(R.id.button_confreser);
-        buttonConfereser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchConfReser();
-            }
-        });
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
-        buttonMyReser = findViewById(R.id.button_myreser);
-        buttonMyReser.setOnClickListener(new View.OnClickListener() {
+
+
+
+    }
+
+    GoogleMap map;
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        map = googleMap;
+        LatLng Aveiro = new LatLng(40.643904619668575, -8.657694437451296);
+        Marker marker = map.addMarker(new MarkerOptions().position(Aveiro).title("Parque Vilamar"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(Aveiro));
+        map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
-            public void onClick(View v) {
-                launchMyReser();
+            public boolean onMarkerClick(Marker marker) {
+                launchFind();
+                return false;
             }
         });
     }
 
-    public void launchConfReser() {
-        Intent intent = new Intent(this, ConfParkActivity.class);
-        startActivity(intent);
-    }
-
-    public void launchMyReser() {
-        Intent intent = new Intent(this, FavActivity.class);
+    public void launchFind() {
+        Intent intent = new Intent(this, Rserve3Activity.class);
         startActivity(intent);
     }
 }
