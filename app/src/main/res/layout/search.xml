@@ -17,6 +17,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
@@ -56,51 +64,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_help" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="371dp"
-        android:layout_height="544dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
-        app:srcCompat="@drawable/mapa" />
-
     <Button
         android:id="@+id/button_addfav"
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="28dp"
         android:text="Add favorities"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        tools:layout_editor_absoluteY="608dp" />
 
     <Button
         android:id="@+id/button_find"
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginStart="104dp"
         android:text="Find my car"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBaseline_toBaselineOf="@+id/button_addfav"
         app:layout_constraintStart_toEndOf="@+id/button_addfav" />
-
-    <Button
-        android:id="@+id/button_noti"
-        style="@style/Widget.AppCompat.Button.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:text="Notification"
-        app:backgroundTint="@color/teal_200"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button_find"
-        app:layout_constraintStart_toEndOf="@+id/button_find" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

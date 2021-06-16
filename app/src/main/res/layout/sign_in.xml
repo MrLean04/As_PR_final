@@ -45,7 +45,7 @@
         android:layout_marginTop="20dp"
         android:text="Remember me"
         app:layout_constraintStart_toStartOf="@+id/guideline18"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
 
     <Button
         android:id="@+id/button_confsup"
@@ -56,7 +56,7 @@
         app:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toStartOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline18"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
 
     <ImageButton
         android:id="@+id/back_button_si"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/user"
         android:layout_width="372dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_username" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/pass"
         android:layout_width="372dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -102,7 +102,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline18"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/user" />
 
     <TextView
         android:id="@+id/textView13"
@@ -113,7 +113,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline18"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/user" />
 
     <TextView
         android:id="@+id/textView_username"

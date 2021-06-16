@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search2Activity">
+
+    <Button
+        android:id="@+id/button_addfav"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Add favorities"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="608dp" />
+
+    <Button
+        android:id="@+id/button_find"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:text="Find my car"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_addfav"
+        app:layout_constraintStart_toEndOf="@+id/button_addfav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

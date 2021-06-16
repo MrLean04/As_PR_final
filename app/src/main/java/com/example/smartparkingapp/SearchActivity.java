@@ -1,5 +1,6 @@
 package com.example.smartparkingapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,42 +9,52 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class SearchActivity extends AppCompatActivity {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-    private Button buttonAddFav, buttonFind, buttonNoti;
+public class SearchActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search);
 
-        buttonAddFav = findViewById(R.id.button_addfav);
-        buttonAddFav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(SearchActivity.this, "Success", Toast.LENGTH_SHORT).show();
-            }
-        });
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
-        buttonFind = findViewById(R.id.button_find);
-        buttonFind.setOnClickListener(new View.OnClickListener() {
+
+
+
+    }
+
+    GoogleMap map;
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        map = googleMap;
+        LatLng Aveiro = new LatLng(40.643904619668575, -8.657694437451296);
+        Marker marker = map.addMarker(new MarkerOptions().position(Aveiro).title("Parque Vilamar"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(Aveiro));
+        map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onMarkerClick(Marker marker) {
                 launchFind();
-            }
-        });
-
-        buttonNoti = findViewById(R.id.button_noti);
-        buttonNoti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(SearchActivity.this, "Nofitication confirm", Toast.LENGTH_SHORT).show();
+                return false;
             }
         });
     }
 
     public void launchFind() {
-        Intent intent = new Intent(this, ReserFindActivity.class);
+        Intent intent = new Intent(this, Search2Activity.class);
         startActivity(intent);
     }
 }
