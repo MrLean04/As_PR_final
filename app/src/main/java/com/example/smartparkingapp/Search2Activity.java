@@ -2,6 +2,7 @@ package com.example.smartparkingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,6 @@ public class Search2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search2);
-
 
 
         buttonAddFav = findViewById(R.id.button_addfav);
@@ -34,8 +34,14 @@ public class Search2Activity extends AppCompatActivity {
             }
         });
 
-
     }
 
-    p
+    public void launchHome() {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
 }

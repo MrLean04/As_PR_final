@@ -32,94 +32,61 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="205dp"
-        android:layout_height="103dp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        app:srcCompat="@drawable/map" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="205dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="204dp"
-        android:layout_marginLeft="204dp"
-        android:layout_marginTop="60dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        app:srcCompat="@drawable/data" />
-
-    <ImageView
         android:id="@+id/imageView5"
         android:layout_width="207dp"
         android:layout_height="104dp"
-        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_search"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.183"
         app:srcCompat="@drawable/reserv" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="208dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/button_info"
-        app:srcCompat="@drawable/fav" />
-
     <Button
-        android:id="@+id/button_search"
+        android:id="@+id/button_statistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Search"
+        android:text="Statistics"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        tools:layout_editor_absoluteY="459dp" />
 
     <Button
-        android:id="@+id/button_info"
+        android:id="@+id/button_myreserves"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Info"
+        android:text="My Reserves"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        tools:layout_editor_absoluteY="279dp" />
 
     <Button
         android:id="@+id/button_reserve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:text="Reserve"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
-        android:id="@+id/button_fav"
+        android:id="@+id/button_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Favorites"
+        android:layout_marginBottom="224dp"
+        android:text="SETTINGS"
         app:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -150,15 +117,38 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="16dp" />
 
-    <ImageButton
-        android:id="@+id/settings"
-        android:layout_width="70dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginLeft="320dp"
-        android:background="#00FFFFFF"
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="97dp"
+        android:layout_height="101dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_icons8_configura__es"
-        tools:layout_editor_absoluteY="2dp" />
+        app:srcCompat="@drawable/pie_chart" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/button_myreserves"
+        app:layout_constraintVertical_bias="0.116"
+        app:srcCompat="@drawable/settings" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="92dp"
+        android:layout_height="104dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_myreserves"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.823"
+        app:srcCompat="@drawable/myreserves" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

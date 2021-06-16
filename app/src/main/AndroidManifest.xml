@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartParkingApp"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".Search2Activity"></activity>
+        <activity android:name=".Search2Activity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

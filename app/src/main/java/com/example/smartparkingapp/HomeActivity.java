@@ -10,15 +10,14 @@ import android.widget.ImageButton;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button buttonSearch, buttonFav, buttonRes,buttonInfo;
-    private ImageButton buttonsettings;
+    private Button buttonsettings, buttonreserve, buttonmyreserves, buttonstatistics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        buttonsettings = findViewById(R.id.settings);
+        buttonsettings = findViewById(R.id.button_settings);
         buttonsettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,46 +25,30 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        buttonSearch = findViewById(R.id.button_search);
-        buttonSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchSearch();
-            }
-        });
-
-        buttonFav = findViewById(R.id.button_fav);
-        buttonFav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchFav();
-            }
-        });
-
-        buttonRes = findViewById(R.id.button_reserve);
-        buttonRes.setOnClickListener(new View.OnClickListener() {
+        buttonreserve = findViewById(R.id.button_reserve);
+        buttonreserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchReserve();
             }
         });
-        buttonInfo = findViewById(R.id.button_info);
-        buttonInfo.setOnClickListener(new View.OnClickListener() {
+
+        buttonmyreserves = findViewById(R.id.button_myreserves);
+        buttonmyreserves.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchInfo();
+                launchMyReserves();
             }
         });
-    }
 
-    public void launchSearch() {
-        Intent intent = new Intent(this, SearchActivity.class);
-        startActivity(intent);
-    }
+        buttonstatistics = findViewById(R.id.button_statistics);
+        buttonstatistics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchStatistics();
+            }
+        });
 
-    public void launchFav() {
-        Intent intent = new Intent(this, FavActivity.class);
-        startActivity(intent);
     }
 
     public void launchReserve() {
@@ -73,7 +56,13 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void launchInfo() {
+
+    public void launchMyReserves() {
+        Intent intent = new Intent(this, ReserveActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchStatistics() {
         Intent intent = new Intent(this, InfoActivity.class);
         startActivity(intent);
     }
