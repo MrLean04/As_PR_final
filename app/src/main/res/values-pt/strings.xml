@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SmartParkingApp</string>
+    <string name="app_name">Gestão de Estacionamento</string>
     <string name="title_activity_settings">SettingsActivity</string>
 
     <!-- Preference Titles -->
@@ -16,7 +17,6 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-
     <string name="title_activity_sucesspay">SucesspayActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -27,11 +27,11 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
-    <string name="signin_user">Username</string>
-    <string name="signin_pass">Password</string>
-    <string name="signin_checkbox">Remember me</string>
-    <string name="signin_forgetpass">Forgot Password</string>
-    <string name="signin_button">Sign In</string>
-    <string name="welcome">Welcome!</string>
->>>>>>> Stashed changes
+    <string name="signin_user">Nome de utilizador</string>
+    <string name="signin_pass">Palavra passe</string>
+    <string name="signin_checkbox">Lembrar-me</string>
+    <string name="signin_forgetpass">Esqueci-me</string>
+    <string name="signin_button">Entrar</string>
+    <string name="welcome">Bem vindo!</string>
+
 </resources>
