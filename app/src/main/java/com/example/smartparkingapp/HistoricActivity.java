@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class myReservesActivity extends AppCompatActivity {
+public class HistoricActivity extends AppCompatActivity {
 
     private ListView localsList;
 
@@ -23,8 +23,9 @@ public class myReservesActivity extends AppCompatActivity {
         localsList = findViewById(R.id.favlist);
 
         ArrayList<String> locals = new ArrayList<>();
-        locals.add("VilaMar - 18/06/21 - 14:00");
-
+        locals.add("VilaMar - 9/10/20 - 10:00");
+        locals.add("VilaMar - 21/03/21 - 13:56");
+        locals.add("AlfaceCity - 30/05/21 - 07:30");
 
 
         ArrayAdapter<String> localsAdapter = new ArrayAdapter<>(
@@ -38,7 +39,7 @@ public class myReservesActivity extends AppCompatActivity {
         localsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(myReservesActivity.this, locals.get(position) + " Selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HistoricActivity.this, locals.get(position) + " Selected", Toast.LENGTH_SHORT).show();
             }
         });
     }

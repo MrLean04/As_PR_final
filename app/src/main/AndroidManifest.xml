@@ -16,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartParkingApp"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".statLisboaActivity"></activity>
+        <activity android:name=".AccountActivity" />
+        <activity android:name=".HistoricActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".statLisboaActivity" />
         <activity android:name=".statAveiroActivity" />
         <activity android:name=".StatisticsActivity" />
         <activity android:name=".myReservesActivity" />

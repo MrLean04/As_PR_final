@@ -13,7 +13,7 @@ public class statLisboaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stat_aveiro);
+        setContentView(R.layout.activity_stat_lisboa);
 
         buttonsettings = findViewById(R.id.imageButton);
         buttonsettings.setOnClickListener(new View.OnClickListener() {

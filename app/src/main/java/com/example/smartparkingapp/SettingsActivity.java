@@ -59,17 +59,17 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void launchAbout() {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
     }
 
     public void launchAccount() {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, AccountActivity.class);
         startActivity(intent);
     }
 
     public void launchHistoric() {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, HistoricActivity.class);
         startActivity(intent);
     }
 
