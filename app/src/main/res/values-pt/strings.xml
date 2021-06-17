@@ -34,4 +34,7 @@
     <string name="signin_button">Entrar</string>
     <string name="welcome">Bem vindo!</string>
 
+    <string name="welTxt">Smart Parking ... inscreva-se agora para encontrar seu lugar para estacionar</string>
+    <string name="signup_button">Inscrever</string>
+
  </resources>
