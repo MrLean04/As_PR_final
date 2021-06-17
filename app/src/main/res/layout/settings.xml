@@ -5,6 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/historic"
+        android:layout_width="288dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="364dp"
+        android:layout_marginEnd="60dp"
+        android:text="MY HISTORIC"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="288dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="60dp"
+        android:text="EXIT"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar6"
         android:layout_width="409dp"
@@ -29,10 +57,8 @@
         android:layout_width="288dp"
         android:layout_height="52dp"
         android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="496dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
         android:text="About"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,11 +71,9 @@
         android:layout_width="288dp"
         android:layout_height="52dp"
         android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="243dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:text="ACCOUNT"
+        android:text="MY ACCOUNT"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -57,18 +81,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/reservations"
+        android:id="@+id/logout"
         android:layout_width="288dp"
         android:layout_height="52dp"
         android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="476dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:text="MY RESERVATIONS"
+        android:text="LOG OUT"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

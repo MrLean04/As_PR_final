@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -19,7 +18,7 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
-        user = findViewById(R.id.user);
+        user = findViewById(R.id.matricula);
         pass = findViewById(R.id.pass);
         buttonConfSignIn = findViewById(R.id.button_confsup);
         AlertDialog.Builder builder1 = new AlertDialog.Builder(SignInActivity.this);

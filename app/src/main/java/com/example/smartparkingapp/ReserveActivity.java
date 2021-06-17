@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,7 +17,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class ReserveActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-
+    private ImageButton buttonsettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +28,13 @@ public class ReserveActivity extends AppCompatActivity implements OnMapReadyCall
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-
-
+        buttonsettings = findViewById(R.id.imageButton);
+        buttonsettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchSettings();
+            }
+        });
 
     }
 
@@ -37,20 +44,31 @@ public class ReserveActivity extends AppCompatActivity implements OnMapReadyCall
     public void onMapReady(GoogleMap googleMap) {
 
         map = googleMap;
+
         LatLng Aveiro = new LatLng(40.643904619668575, -8.657694437451296);
-        Marker marker = map.addMarker(new MarkerOptions().position(Aveiro).title("Parque Vilamar"));
+        Marker marker1 = map.addMarker(new MarkerOptions().position(Aveiro).title("Parque Vilamar"));
+
+        LatLng Lisboa = new LatLng(38.73755038183533, -9.134404385710498);
+        Marker marker2 = map.addMarker(new MarkerOptions().position(Lisboa).title("Parque AlfaceCity"));
+
         map.moveCamera(CameraUpdateFactory.newLatLng(Aveiro));
+
         map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                launchFind();
+                    launchReserve2();
                 return false;
             }
         });
     }
 
-    public void launchFind() {
-        Intent intent = new Intent(this, Rserve3Activity.class);
+    public void launchReserve2() {
+        Intent intent = new Intent(this, Reserve2Activity.class);
+        startActivity(intent);
+    }
+
+    public void launchSettings() {
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 }

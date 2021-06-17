@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -16,18 +18,23 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class StatisticsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
 
-
+    private ImageButton buttonsettings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.search);
+        setContentView(R.layout.activity_statistics);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-
-
+        buttonsettings = findViewById(R.id.imageButton);
+        buttonsettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchSettings();
+            }
+        });
 
     }
 
@@ -50,7 +57,7 @@ public class StatisticsActivity extends AppCompatActivity implements OnMapReadyC
             @Override
             public boolean onMarkerClick(Marker marker) {
                 if (marker.equals(marker1))
-                    launchSatisticsAveiro();
+                    launchStatisticsAveiro();
                 else
                    launchStatisticsLisboa();
                 return false;
@@ -58,13 +65,18 @@ public class StatisticsActivity extends AppCompatActivity implements OnMapReadyC
         });
     }
 
-    public void launchSatisticsAveiro() {
+    public void launchStatisticsAveiro() {
         Intent intent = new Intent(this, statAveiroActivity.class);
         startActivity(intent);
     }
 
     public void launchStatisticsLisboa() {
         Intent intent = new Intent(this, statLisboaActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchSettings() {
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 }
