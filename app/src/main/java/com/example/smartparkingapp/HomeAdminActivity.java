@@ -1,20 +1,26 @@
 package com.example.smartparkingapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HomeActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.smartparkingapp.R;
+import com.example.smartparkingapp.ReserveActivity;
+import com.example.smartparkingapp.SettingsActivity;
+import com.example.smartparkingapp.StatisticsActivity;
+import com.example.smartparkingapp.myReservesActivity;
+
+public class HomeAdminActivity extends AppCompatActivity {
 
     private Button buttonsettings, buttonreserve, buttonmyreserves, buttonstatistics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.homeadmin);
 
         buttonsettings = findViewById(R.id.button_settings);
         buttonsettings.setOnClickListener(new View.OnClickListener() {
@@ -28,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         buttonreserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchReserve();
+                launchManagePark();
             }
         });
 
@@ -36,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         buttonmyreserves.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchMyReserves();
+                launchManageFinances();
             }
         });
 
@@ -50,14 +56,14 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    public void launchReserve() {
-        Intent intent = new Intent(this, ReserveActivity.class);
+    public void launchManageFinances() {
+        Intent intent = new Intent(this, FinancesActivity.class);
         startActivity(intent);
     }
 
 
-    public void launchMyReserves() {
-        Intent intent = new Intent(this, myReservesActivity.class);
+    public void launchManagePark() {
+        Intent intent = new Intent(this, ManageActivity.class);
         startActivity(intent);
     }
 

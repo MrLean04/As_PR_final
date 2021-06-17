@@ -8,16 +8,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class SignInActivity extends AppCompatActivity {
 
     private Button buttonConfSignIn;
     private EditText user;
     private EditText pass;
+    private TextView txtSignInUser, txtSignInPass, txtRemember, txtForgetpass, txtSignIn, txtWelcome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
+
+        txtSignInUser = findViewById(R.id.textView_username);
+        txtSignInUser.setText(getString(R.string.signin_user));
+
+        txtSignInPass = findViewById(R.id.textView_password);
+        txtSignInPass.setText(getString(R.string.signin_pass));
+
+        txtRemember = findViewById(R.id.checkBox);
+        txtRemember.setText(getString(R.string.signin_checkbox));
+
+        txtForgetpass = findViewById(R.id.textView_forgetpass);
+        txtForgetpass.setText(getString(R.string.signin_forgetpass));
+
+        txtSignIn = findViewById(R.id.button_confsup);
+        txtSignIn.setText(getString(R.string.signin_button));
+
+        txtWelcome = findViewById(R.id.textView6);
+        txtWelcome.setText(getString(R.string.welcome));
+
         user = findViewById(R.id.matricula);
         pass = findViewById(R.id.pass);
         buttonConfSignIn = findViewById(R.id.button_confsup);
@@ -50,7 +72,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void launchAdminSign() {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, HomeAdminActivity.class);
         startActivity(intent);
     }
 }

@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/signimg" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView_forgetpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password"
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/matricula" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textView_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

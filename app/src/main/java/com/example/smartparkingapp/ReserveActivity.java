@@ -53,6 +53,9 @@ public class ReserveActivity extends AppCompatActivity implements OnMapReadyCall
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Aveiro));
 
+        marker2.showInfoWindow();
+        marker1.showInfoWindow();
+
         map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {

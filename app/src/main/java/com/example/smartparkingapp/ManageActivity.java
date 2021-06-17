@@ -1,11 +1,13 @@
 package com.example.smartparkingapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,14 +17,15 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class StatisticsActivity extends AppCompatActivity implements OnMapReadyCallback {
-
+public class ManageActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private ImageButton buttonsettings;
+    private Button buttonAdd, buttonRemove;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_statistics);
+        setContentView(R.layout.manage);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -33,6 +36,24 @@ public class StatisticsActivity extends AppCompatActivity implements OnMapReadyC
             @Override
             public void onClick(View v) {
                 launchSettings();
+            }
+        });
+
+        buttonAdd = findViewById(R.id.buttonAdd);
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ManageActivity.this, "Success!!",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        buttonRemove = findViewById(R.id.buttonRemove);
+        buttonRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ManageActivity.this, "Success!!",
+                        Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -59,22 +80,14 @@ public class StatisticsActivity extends AppCompatActivity implements OnMapReadyC
         map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                if (marker.equals(marker1))
-                    launchStatisticsAveiro();
-                else
-                   launchStatisticsLisboa();
+                    launchReserve2();
                 return false;
             }
         });
     }
 
-    public void launchStatisticsAveiro() {
-        Intent intent = new Intent(this, statAveiroActivity.class);
-        startActivity(intent);
-    }
-
-    public void launchStatisticsLisboa() {
-        Intent intent = new Intent(this, statLisboaActivity.class);
+    public void launchReserve2() {
+        Intent intent = new Intent(this, Reserve2Activity.class);
         startActivity(intent);
     }
 

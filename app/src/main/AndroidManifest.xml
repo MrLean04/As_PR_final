@@ -16,8 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartParkingApp"
         tools:replace="android:appComponentFactory">
+        <activity android:name=".FinancesActivity" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".HistoricActivity" />
+        <activity android:name=".ManageActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".statLisboaActivity" />
         <activity android:name=".statAveiroActivity" />
@@ -33,9 +35,8 @@
             android:name=".SucesspayActivity"
             android:label="@string/title_activity_sucesspay"
             android:theme="@style/Theme.SmartParkingApp.NoActionBar" />
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" />
+
+
         <activity android:name=".SignupActivity" />
         <activity android:name=".ReserFindActivity" />
         <activity android:name=".Reserve2Activity" />
@@ -43,9 +44,11 @@
         <activity android:name=".FavActivity" />
         <activity android:name=".ReserveActivity" />
         <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeAdminActivity" />
         <activity android:name=".ConfParkActivity" />
         <activity android:name=".CheckpayActivity" />
         <activity android:name=".SignInActivity" />
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
